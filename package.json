@@ -1,0 +1,43 @@
+{
+  "name": "mentor",
+  "version": "1.0.0",
+  "description": "The platform that provides free mentorship for it users.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ally4/Mentor.git"
+  },
+  "keywords": [
+    "Mentorship"
+  ],
+  "author": "Ally",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ally4/Mentor/issues"
+  },
+  "homepage": "https://github.com/Ally4/Mentor#readme",
+  "dependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/register": "^7.5.5",
+    "bcrypt": "^3.0.6",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "coveralls": "^3.0.6",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.1",
+    "nyc": "^14.1.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.2.2"
+  }
+}
