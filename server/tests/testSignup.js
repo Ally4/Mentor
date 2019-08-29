@@ -21,7 +21,7 @@ it('should be able to signup with full information', (done) => {
       expertise: 'Public-speaker',
     };
     chai.request(app)
-      .post('/api/v1//auth/signup')
+      .post('/api/v1/auth/signup')
       .send(user)
       .then((res) => {
         res.body.status.should.be.equal(201);

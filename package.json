@@ -4,8 +4,11 @@
   "description": "The platform that provides free mentorship for it users.",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon --exec babel-node app.js",
-    "test": "nyc --reporter-html --report=text mocha --recursive --require @babel/register --timeout 10000 --exit ./server/test/*"
+    "start": "nodemon start",
+    "test": "nyc --reporter-html --report=text mocha --recursive --require @babel/register --timeout 10000 --exit ./server/tests/*.js"
+  },
+  "nyc": {
+    "exclude": "server/tests/*.js"
   },
   "repository": {
     "type": "git",
