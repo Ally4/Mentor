@@ -25,7 +25,7 @@ describe('Change User test', () => {
 
       it('should check for token allowed token', (done) => {
         chai.request(app)
-          .patch('/api/v1/user/1')
+          .patch('/api/v1/change/1')
           .set('authorization', tokenAdminErr)
           .then((res) => {
             res.body.status.should.be.equal(403);
@@ -36,7 +36,7 @@ describe('Change User test', () => {
 
       it('should check if user Id exists', (done) => {
         chai.request(app)
-          .patch('/api/v1/user/20')
+          .patch('/api/v1/change/20')
           .set('authorization', tokenAdmin)
           .then((res) => {
             res.body.status.should.be.equal(404);
@@ -47,7 +47,7 @@ describe('Change User test', () => {
 
       it('should check for unauthorized', (done) => {
         chai.request(app)
-          .patch('/api/v1/user/3')
+          .patch('/api/v1/change/3')
           .set('authorization', tokenAdmin)
           .then((res) => {
             res.body.status.should.be.equal(401);
@@ -58,7 +58,7 @@ describe('Change User test', () => {
 
       it('should check for route access', (done) => {
         chai.request(app)
-          .patch('/api/v1/user/1')
+          .patch('/api/v1/change/1')
           .set('authorization', tokenUser)
           .then((res) => {
             res.body.status.should.be.equal(403);
@@ -69,7 +69,7 @@ describe('Change User test', () => {
 
       it('should check for token header', (done) => {
         chai.request(app)
-          .patch('/api/v1/user/1')
+          .patch('/api/v1/change/1')
           .then((res) => {
             res.body.status.should.be.equal(403);
             done();
@@ -79,7 +79,7 @@ describe('Change User test', () => {
 
       it('should changer user to mentor', (done) => {
         chai.request(app)
-          .patch('/api/v1/user/1')
+          .patch('/api/v1/change/1')
           .set('authorization', tokenAdmin)
           .then((res) => {
             res.body.status.should.be.equal(200);
