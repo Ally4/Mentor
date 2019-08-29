@@ -8,6 +8,7 @@ import getAMentor from '../controllers/mentor';
 import authent from '../middleware/authent';
 import change from '../controllers/change';
 import signin from '../controllers/signin';
+import create from '../controllers/create';
 
 const router = express.Router();
 
@@ -26,6 +27,7 @@ router.patch('/api/v1/user/:userId', authent, change);
 //For the signin
 router.post('/api/v1/auth/signin', signin);
 
-
+//for the creation of the session
+router.post('/api/v1/sessions', authent, create);
 
 export default router; 
