@@ -3,17 +3,19 @@
 /* eslint-disable spaced-comment */
 import express from 'express';
 import signup from '../controllers/signup';
+import getMentors from '../controllers/mentors';
 import getAMentor from '../controllers/mentor';
 import authent from '../middleware/authent';
 import change from '../controllers/change';
 import signin from '../controllers/signin';
-
 
 const router = express.Router();
 
 //For the signup
 router.post('/api/v1/auth/signup', signup);
 
+//for all the mentors
+router.get('/api/v1/mentors', authent, getMentors);
 
 //for a mentor by id
 router.get('/api/v1/mentors/:mentorId', authent, getAMentor);
