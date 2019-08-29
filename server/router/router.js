@@ -5,6 +5,10 @@ import express from 'express';
 import signup from '../controllers/signup';
 import getMentors from '../controllers/mentors';
 import authent from '../middleware/authent';
+import change from '../controllers/change';
+import signin from '../controllers/signin';
+
+
 
 
 const router = express.Router();
@@ -14,5 +18,12 @@ router.post('/api/v1/auth/signup', signup);
 
 //for all the mentors
 router.get('/api/v1/mentors', authent, getMentors);
+
+//for the patches
+router.patch('/api/v1/user/:userId', authent, change);
+
+//For the signin
+router.post('/api/v1/auth/signin', signin);
+
 
 export default router; 
