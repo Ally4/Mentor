@@ -9,6 +9,7 @@ import authent from '../middleware/authent';
 import change from '../controllers/change';
 import signin from '../controllers/signin';
 import create from '../controllers/create';
+import getUsers from '../controllers/users';
 
 const router = express.Router();
 
@@ -29,5 +30,8 @@ router.post('/api/v1/auth/signin', signin);
 
 //for the creation of the session
 router.post('/api/v1/sessions', authent, create);
+
+//for getting all the users
+router.get('/api/v1/users', authent, getUsers);
 
 export default router; 
