@@ -28,8 +28,8 @@ describe('/PATCH Accept user request', () => {
         .patch('/api/v1/sessions/1/accept')
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         }).catch(err => done(err));
-        done();
     });
 
     it('Should check valid token', (done) => {
@@ -38,9 +38,9 @@ describe('/PATCH Accept user request', () => {
         .set('authorization', tokenMentorErr)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check route access', (done) => {
@@ -49,9 +49,9 @@ describe('/PATCH Accept user request', () => {
         .set('authorization', tokenUser)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check if session Id exists', (done) => {
@@ -60,9 +60,9 @@ describe('/PATCH Accept user request', () => {
         .set('authorization', tokenMentor)
         .then((res) => {
             res.body.status.should.be.equal(404);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check if mentor Id in the session equal to mentor Id ', (done) => {
@@ -71,9 +71,9 @@ describe('/PATCH Accept user request', () => {
         .set('authorization', tokenMentor)
         .then((res) => {
             res.body.status.should.be.equal(401);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check if session already accepted', (done) => {
@@ -82,9 +82,9 @@ describe('/PATCH Accept user request', () => {
         .set('authorization', tokenMentor)
         .then((res) => {
             res.body.status.should.be.equal(409);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should update status to accepted', (done) => {
@@ -93,8 +93,8 @@ describe('/PATCH Accept user request', () => {
         .set('authorization', tokenMentor)
         .then((res) => {
             res.body.status.should.be.equal(200);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 });

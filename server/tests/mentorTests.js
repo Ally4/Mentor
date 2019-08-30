@@ -29,8 +29,8 @@ describe('/GET Specific Mentor', () => {
         .get('/api/v1/mentors/1')
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         }).catch(err => done(err));
-        done();
     });
 
     it('Should check valid token', (done) => {
@@ -39,9 +39,9 @@ describe('/GET Specific Mentor', () => {
         .set('authorization', tokenUserErr)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check route access', (done) => {
@@ -50,9 +50,9 @@ describe('/GET Specific Mentor', () => {
         .set('authorization', tokenMentor)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check if ID exists', (done) => {
@@ -61,9 +61,9 @@ describe('/GET Specific Mentor', () => {
         .set('authorization', tokenUser)
         .then((res) => {
             res.body.status.should.be.equal(404);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check Id if is mentor Id', (done) => {
@@ -72,9 +72,9 @@ describe('/GET Specific Mentor', () => {
         .set('authorization', tokenUser)
         .then((res) => {
             res.body.status.should.be.equal(401);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should view specific mentor', (done) => {
@@ -83,8 +83,8 @@ describe('/GET Specific Mentor', () => {
         .set('authorization', tokenUser)
         .then((res) => {
             res.body.status.should.be.equal(200);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 });
