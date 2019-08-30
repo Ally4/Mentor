@@ -11,7 +11,7 @@ dotenv.config();
 
 
 const getAMentor = (req, res) => {
-  const user = users.find(i => i.id === parseInt(req.params.id));
+  const user = users.find(i => i.id === parseInt(req.params.mentorId));
   jwt.verify(req.token, process.env.THE_KEY, (err, theUser) => {
     if (err) {
       res.status(403).json({

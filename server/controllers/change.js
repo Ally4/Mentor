@@ -10,7 +10,7 @@ dotenv.config();
 
 
 const change = (req, res) => {
-  const user = users.find(i => i.id === parseInt(req.params.id));
+  const user = users.find(i => i.id === parseInt(req.params.userId));
 
   jwt.verify(req.token, process.env.THE_KEY, (err, theUser) => {
     if (err) {
@@ -38,6 +38,7 @@ const change = (req, res) => {
       users.push(user);
       res.status(200).json({
         status: 200,
+        message: 'User changed to mentor',
         user,
       });
     }

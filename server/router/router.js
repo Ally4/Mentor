@@ -39,7 +39,7 @@ router.get('/api/v1/mentors', authent, getMentors);
 router.get('/api/v1/users', authent, getUsers);
 
 //for the viewing of sessions
-router.post('/api/v1/sessionsView', authent, sessions);
+router.get('/api/v1/sessionsView', authent, sessions);
 
 //for the mentor to reject the session
 router.patch('/api/v1/sessions/:sessionId/reject', authent, reject);

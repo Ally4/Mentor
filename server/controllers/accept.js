@@ -10,7 +10,7 @@ dotenv.config();
 
 const accept = (req, res) => {
   jwt.verify(req.token, process.env.THE_KEY, (err, theUser) => {
-    const session = sessions.find(c => c.id === parseInt(req.params.id));
+    const session = sessions.find(c => c.id === parseInt(req.params.sessionId));
 
     if (err) {
       res.status(403).json({
