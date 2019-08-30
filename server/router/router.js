@@ -10,6 +10,10 @@ import change from '../controllers/change';
 import signin from '../controllers/signin';
 import create from '../controllers/create';
 import getUsers from '../controllers/users';
+import reject from '../controllers/reject';
+import accept from '../controllers/accept';
+
+
 
 const router = express.Router();
 
@@ -33,5 +37,13 @@ router.post('/api/v1/sessions', authent, create);
 
 //for getting all the users
 router.get('/api/v1/users', authent, getUsers);
+
+//for the mentor to reject the session
+router.patch('/api/v1/sessions/:sessionId/reject', authent, reject);
+
+//for the mentor to accept the session
+router.patch('/api/v1/sessions/:sessionId/accept', authent, accept);
+
+
 
 export default router; 
