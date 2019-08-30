@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable eol-last */
 /* eslint-disable indent */
-import { describe, it } from 'mocha';
+/* eslint-disable no-undef */
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import app from '../../app';
