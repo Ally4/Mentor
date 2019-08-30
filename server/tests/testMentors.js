@@ -28,8 +28,8 @@ describe('/GET Mentors', () => {
         .get('/api/v1/mentors')
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         }).catch(err => done(err));
-        done();
     });
 
     it('Should check valid token', (done) => {
@@ -38,9 +38,9 @@ describe('/GET Mentors', () => {
         .set('authorization', tokenUserErr)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check route access', (done) => {
@@ -49,9 +49,9 @@ describe('/GET Mentors', () => {
         .set('authorization', tokenMentor)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should view mentors', (done) => {
@@ -60,8 +60,8 @@ describe('/GET Mentors', () => {
         .set('authorization', tokenUser)
         .then((res) => {
             res.body.status.should.be.equal(200);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 });
