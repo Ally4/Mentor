@@ -29,17 +29,17 @@ describe('/POST Create session request', () => {
         .set('authorization', tokenUserErr)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
     it('Err in auth', (done) => {
         chai.request(app)
         .post('/api/v1/sessions')
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         }).catch(err => done(err));
-        done();
     });
 
     it('Should check route access', (done) => {
@@ -48,9 +48,9 @@ describe('/POST Create session request', () => {
         .set('authorization', tokenMentor)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should create session request', (done) => {
@@ -63,8 +63,8 @@ describe('/POST Create session request', () => {
         .set('authorization', tokenUser)
         .then((res) => {
             res.body.status.should.be.equal(201);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 });

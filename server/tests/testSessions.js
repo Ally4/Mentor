@@ -28,8 +28,8 @@ describe('/GET Sessions', () => {
         .get('/api/v1/sessionsView')
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         }).catch(err => done(err));
-        done();
     });
 
     it('Should check valid token', (done) => {
@@ -38,9 +38,9 @@ describe('/GET Sessions', () => {
         .set('authorization', tokenMentorErr)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check route access', (done) => {
@@ -49,9 +49,9 @@ describe('/GET Sessions', () => {
         .set('authorization', tokenUser)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should get sessions', (done) => {
@@ -60,8 +60,8 @@ describe('/GET Sessions', () => {
         .set('authorization', tokenMentor)
         .then((res) => {
             res.body.status.should.be.equal(200);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 });

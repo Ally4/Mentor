@@ -28,8 +28,8 @@ describe('/GET Users', () => {
         .get('/api/v1/users')
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         }).catch(err => done(err));
-        done();
     });
 
     it('Should check valid token', (done) => {
@@ -38,9 +38,9 @@ describe('/GET Users', () => {
         .set('authorization', tokenAdminErr)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should check route access', (done) => {
@@ -49,9 +49,9 @@ describe('/GET Users', () => {
         .set('authorization', tokenMentor)
         .then((res) => {
             res.body.status.should.be.equal(403);
+            done();
         })
         .catch(err => done(err));
-        done();
     });
 
     it('Should get users', (done) => {
@@ -60,8 +60,8 @@ describe('/GET Users', () => {
         .set('authorization', tokenAdmin)
         .then((res) => {
             res.body.status.should.be.equal(200);
+            done();
         })
         .catch(err => done(err));
-    done();
   });
 });
