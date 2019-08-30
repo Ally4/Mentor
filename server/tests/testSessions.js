@@ -25,7 +25,7 @@ describe('/GET Sessions', () => {
 
     it('Err in auth', (done) => {
         chai.request(app)
-        .get('/api/v1/sessions')
+        .get('/api/v1/sessionsView')
         .then((res) => {
             res.body.status.should.be.equal(403);
         }).catch(err => done(err));
