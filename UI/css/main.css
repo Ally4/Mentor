@@ -13,7 +13,7 @@ body{
     text-align: center;
   }
   .Sign #signin{
-    padding: 0.6em;
+    padding: 0.9em;
     margin-top: 2%;
     border-radius: 0.5rem;
     outline: none;
@@ -30,7 +30,7 @@ body{
     margin-bottom: 4%;
     max-width:300px;
     border-radius: 0.5em;
-    padding:0.5em;
+    padding:0.8em;
   }
   a {
     text-decoration: none;
@@ -39,7 +39,7 @@ body{
   #enter{
       border-radius: 0.5rem;
       background-color: rgb(2, 103, 143);
-      padding: 0.5em;
+      padding: 0.8em;
       cursor: pointer;
       outline: none;
   }
@@ -273,7 +273,7 @@ body.mentor{
   #enter-change{
     border-radius: 0.5rem;
       background-color: rgb(226, 223, 9);
-      padding: 0.5em;
+      padding: 0.8em;
       cursor: pointer;
       outline: none;
   }
@@ -355,4 +355,30 @@ textarea {
   margin-left: 40%;
   outline: none;
   cursor: pointer;
+}
+
+
+.signup-but{
+  color:blue;
+}
+
+.signup-but1{
+  font-size: 20px;
+  font-weight: bold;
+  color:blue;
+  text-align: center;
+}
+body.home{
+  overflow: hidden;
+}
+.signup-but2{
+margin-left: 35%;
+margin-top: 10%;
+}
+
+.signup-but3{
+  font-size: 20px;
+  font-weight: bold;
+  color:white;
+  text-align: center;
 }
