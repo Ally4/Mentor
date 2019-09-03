@@ -252,7 +252,7 @@ body.session{
 }
 
 body.mentor{
-  background-image: none;
+  background-image: url(../img/neonbrand-y_6rqStQBYQ-unsplash.jpg);
   font-family: sans-serif;
   color: grey;
   background-color: rgb(222, 235, 214);
@@ -276,7 +276,20 @@ body.mentor{
       padding: 0.8em;
       cursor: pointer;
       outline: none;
+      margin-left: 45%;
+      margin-top: 1%;
   }
+
+  #enter-change2{
+    border-radius: 0.5rem;
+      background-color: rgb(226, 223, 9);
+      padding: 0.5em;
+      cursor: pointer;
+      outline: none;
+      margin-left: 0%;
+      margin-top: 1%;
+  }
+
 
 body.changed{
   overflow: hidden;
@@ -381,4 +394,77 @@ margin-top: 10%;
   font-weight: bold;
   color:white;
   text-align: center;
+
+
+
+.t-user {
+  border: 2px solid grey;
+border-collapse: collapse;
+margin: 0px 0;
+min-width: 400px;
+font-size: 0.9em;
+margin-left: 480px;
+background: rgba(75, 157, 224, 0.89);
+padding-top: 1900px;
+box-shadow: 0.5em 0.5em 0.5em #9c9c9c;  
+border-radius: 5px 5px 0 0;
+text-align: left;
+}
+
+.t-user thead tr{
+  background-color: grey;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+.t-user th,
+.t-user td{
+  padding: 12px 15px;
+}
+.t-user tbody tr{
+  color: white;
+  border-bottom: 1px solid black;
+}
+.t-user tbody tr:nth-of-type(even){
+  background-color: aqua;
+}
+.t-user tbody tr:last-of-type{
+  border-bottom: 1px solid black;
+}
+
+
+.t-session {
+  border: 2px solid grey;
+border-collapse: collapse;
+margin: 25px 0;
+min-width: 400px;
+font-size: 0.9em;
+margin-left: 480px;
+background: rgba(75, 157, 224, 0.89);
+padding-top: 1000px;
+box-shadow: 0.5em 0.5em 0.5em #9c9c9c;  
+border-radius: 5px 5px 0 0;
+text-align: left;
+}
+
+.t-session thead tr{
+  background-color: grey;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+}
+.t-session th,
+.t-session td{
+  padding: 12px 15px;
+}
+.t-session tbody tr{
+  color: white;
+  border-bottom: 1px solid black;
+}
+.t-session tbody tr:nth-of-type(even){
+  background-color: aqua;
+}
+.t-session tbody tr:last-of-type{
+  border-bottom: 1px solid black;
+
 }
