@@ -3,20 +3,179 @@
 
 <head>
     <meta name="viewport" content="width= device-width, initial-scale=1.0">
-    <title>Free Mentorship</title>
+    <title>The-Mentor</title>
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="shortcut icon" href="../img/download (2).png" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../img/download (2).png" type="image/x-icon" />
+    <style>
+        #containerm {
+            margin: 0 auto;
+            width: 80%;
+            font-family: verdana, arial, sans-serif;
+            font-size: 16px;
+        }
+
+        #modalWindow {
+            position: fixed;
+            font-family: arial, helvetica, sans-serif;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 99999;
+            opacity: 0;
+            transition: opacity 400ms linear;
+            pointer-events: none;
+        }
+
+        #modalWindow:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #modalWindow>div {
+            padding: 0.6em;
+            background-color: solid 1px #cac8c8;
+            margin-top: 10%;
+            border-radius: 0.5rem;
+            outline: none;
+            border: solid 1px #cac8c8;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+
+        #modalWindow2 {
+            position: fixed;
+            font-family: arial, helvetica, sans-serif;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 99999;
+            opacity: 0;
+            transition: opacity 400ms linear;
+            pointer-events: none;
+        }
+
+        #modalWindow2:target {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        #modalWindow2>div {
+            padding: 0.6em;
+            background-color: solid 1px #cac8c8;
+            margin-top: 10%;
+            border-radius: 0.5rem;
+            outline: none;
+            border: solid 1px #cac8c8;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+    </style>
 </head>
 
 <body class="sessions">
-    <h1>Only for the mentor!.</h1>
-    <div class="Sign">
-        <form action="./session.html">
-            <input id="signin" type="password" placeholder="password" required></br></br>
-            <button id="enter" type="submit"><a href="../index.html"></a>Signin</button></br>
-        </form></br>
+    <div class="nav">
+        <img class="logo-home" src="../img/downloadvv2.png">
+        <li><a href="../index.html">Logout</a></li>
+        <li><a href="#modalWindow2">Users</a></li>
+        <li><a href="#modalWindow">Sessions</a></li>
+        <li><input class="look" type="text" placeholder="Search for a mentor" name="search"></li>
     </div>
-    <img class="logo" src="../img/downloadvv2.png">
+    <table class="table-sessions">
+        <thead>
+            <tr>
+                <th>Number</th>
+                <th>First-Name</th>
+                <th>Last-Name</th>
+                <th>E-mail</th>
+                <th>Question</th>
+                <td>View session</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>NENGO</td>
+                <td>Ally</td>
+                <td>el.ally741@gmail.com</td>
+                <td>What does make a good developer?</td>
+                <td><a href="session.html">View</a></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NENGO</td>
+                <td>Ally</td>
+                <td>el.ally741@gmail.com</td>
+                <td>What does make a good developer?</td>
+                <td><a href="session.html">View</a></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NENGO</td>
+                <td>Ally</td>
+                <td>el.ally741@gmail.com</td>
+                <td>What does make a good developer?</td>
+                <td><a href="session.html">View</a></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NENGO</td>
+                <td>Ally</td>
+                <td>el.ally741@gmail.com</td>
+                <td>What does make a good developer?</td>
+                <td><a href="session.html">View</a></td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>NENGO</td>
+                <td>Ally</td>
+                <td>el.ally741@gmail.com</td>
+                <td>What does make a good developer?</td>
+                <td><a href="session.html">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="pop">
+        <div id="containerm">
+            <p>
+            </p>
+        </div>
+
+        <div id="modalWindow">
+            <div>
+                <a class="back" href="#close">Back</a><br>
+                <div class="sessions-pop">
+                    <h1>Only for the mentor!.</h1>
+                    <div class="Sign-p">
+                        <form action="./sessions.html" method="POST">
+                            <input id="signin-pop" type="password" placeholder="password" required></br></br>
+                            <button id="enter-pop" type="submit"><a href="../index.html"></a>Signin</button></br>
+                        </form></br>
+                    </div>
+                    <img class="logo" src="../img/downloadvv2.png">
+                </div>
+            </div>
+        </div>
+        <div id="modalWindow2">
+            <div>
+                <a class="back" href="#close">Back</a><br>
+                <div class="sessions-pop">
+                    <h1>Only for the Admin!.</h1>
+                    <div class="Sign-p">
+                        <form action="./users.html" method="POST">
+                            <input id="signin-pop" type="password" placeholder="password" required></br></br>
+                            <button id="enter-pop" type="submit"><a href="../index.html"></a>Signin</button></br>
+                        </form></br>
+                    </div>
+                    <img class="logo" src="../img/downloadvv2.png">
+                </div>
+            </div>
+        </div>
+
+    </div>
 </body>
 
 </html>

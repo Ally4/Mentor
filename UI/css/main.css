@@ -11,9 +11,11 @@ body{
   }
   h1{
     text-align: center;
+    color:white;
   }
   .Sign #signin{
-    padding: 0.9em;
+    padding: 1.1em;
+    width: 240px;
     margin-top: 2%;
     border-radius: 0.5rem;
     outline: none;
@@ -39,7 +41,9 @@ body{
   #enter{
       border-radius: 0.5rem;
       background-color: rgb(2, 103, 143);
-      padding: 0.8em;
+      padding: 1em;
+      color:white;
+      font-weight: bold;
       cursor: pointer;
       outline: none;
   }
@@ -79,11 +83,11 @@ body{
    padding: 0; 
  }
  .intro{
-   font-size: 40px;
+   font-size: 30px;
    font-weight: bold;
    color: white;
    text-align: center;
-   padding-top: 200px;
+   padding-top: 100px;
  }
 
  .table{
@@ -256,7 +260,7 @@ body.mentor{
   font-family: sans-serif;
   color: grey;
   background-color: rgb(222, 235, 214);
-  overflow-y: scroll;
+  overflow: hidden;
   text-align: center;
   font-weight: 95px;
 }
@@ -273,21 +277,27 @@ body.mentor{
   #enter-change{
     border-radius: 0.5rem;
       background-color: rgb(226, 223, 9);
-      padding: 0.8em;
+      padding: 1.1em;
       cursor: pointer;
       outline: none;
-      margin-left: 45%;
+      margin-left: 0%;
       margin-top: 1%;
+      color: rgb(51, 17, 17);
+      width: 200px;
+      font-weight: bold;
   }
 
   #enter-change2{
     border-radius: 0.5rem;
       background-color: rgb(226, 223, 9);
-      padding: 0.5em;
+      padding: 1.1em;
       cursor: pointer;
       outline: none;
       margin-left: 0%;
       margin-top: 1%;
+      color: rgb(51, 17, 17);
+      width: 200px;
+      font-weight: bold;
   }
 
 
@@ -352,9 +362,10 @@ textarea {
 
 #reject-button{
   background-color: red;
-  padding: 5px;
+  padding: 1em;
   border-radius: 10px;
   float: right;
+  color:white;
   margin-right: 40%;
   outline: none;
   cursor: pointer;
@@ -362,9 +373,10 @@ textarea {
 
 #accept-button{
   background-color: green;
-  padding: 5px;
+  padding: 1em;
   border-radius: 10px;
   float: left;
+  color:white;
   margin-left: 40%;
   outline: none;
   cursor: pointer;
@@ -372,13 +384,27 @@ textarea {
 
 
 .signup-but{
-  color:blue;
+  color: rgb(133, 82, 7);
+  font-weight: bold;
 }
 
 .signup-but1{
   font-size: 20px;
   font-weight: bold;
-  color:blue;
+  color:chocolate;
+  text-align: center;
+}
+.signup-but1 a{
+  font-size: 20px;
+  font-weight: bold;
+  color:rgb(113, 143, 16);
+  text-align: center;
+}
+
+.signup-but a{
+  font-size: 20px;
+  font-weight: bold;
+  color:rgb(113, 143, 16);
   text-align: center;
 }
 body.home{
@@ -394,10 +420,11 @@ margin-top: 10%;
   font-weight: bold;
   color:white;
   text-align: center;
+}
 
 
 
-.t-user {
+.t-user{
   border: 2px solid grey;
 border-collapse: collapse;
 margin: 0px 0;
@@ -468,3 +495,162 @@ text-align: left;
   border-bottom: 1px solid black;
 
 }
+
+.title1{
+  color:white;
+}
+
+
+
+
+
+#containerm{
+  margin: 0px auto;
+  width:80%;
+  font-size:16px;
+}
+#modalwindow{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0, 0.4);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 400ms linear;
+  pointer-events: auto;
+}
+#modalWindow:target{
+opacity: 1;
+pointer-events: auto;
+}
+#modalWindow > div{
+width: 400px;
+height: 314px;
+position: relative;
+margin: 10% auto;
+padding: 20px 20px 13px 20px;
+border: 2px solid black;
+box-shadow: 0.5em 0.5em 0.5em #9c9c9c; 
+border-radius: 10px;
+text-align: center;
+background-color: rgba(111, 111, 139, 0.726);
+}
+
+.signin-pop{
+  margin-left: 30%;
+}
+
+#modalWindow .logo{
+  margin-left: 20px;
+}
+
+#modalwindow2{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgb(0, 0, 0, 0.4);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 400ms linear;
+  pointer-events: auto;
+}
+#modalWindow2:target{
+opacity: 1;
+pointer-events: auto;
+}
+#modalWindow2 > div{
+width: 400px;
+height: 314px;
+position: relative;
+margin: 10% auto;
+padding: 20px 20px 13px 20px;
+border: 2px solid black;
+box-shadow: 0.5em 0.5em 0.5em #9c9c9c; 
+border-radius: 10px;
+text-align: center;
+background-color: rgba(111, 111, 139, 0.726);
+}
+
+.signin-pop{
+  margin-left: 30%;
+}
+
+#modalWindow2 .logo{
+  margin-left: 20px;
+}
+
+#enter-pop{
+  border-radius: 0.5rem;
+  background-color: rgb(2, 103, 143);
+  padding: 1em;
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+#signin-pop{
+  padding: 1.2em;
+  width: 240px;
+  margin-top: 2%;
+  border-radius: 0.5rem;
+  outline: none;
+  border: solid 1px #cac8c8;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.back{
+  color: white;
+  font-weight: bold;
+}
+
+.up{
+  margin-top: -25px;
+}
+
+
+.table-sessions 
+{
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+border: 2px solid grey;
+border-collapse: collapse;
+margin: 25px 0;
+min-width: 400px;
+font-size: 0.9em;
+margin-left: 80px;
+background: rgba(75, 157, 224, 0.89);
+padding-top: 1000px;
+box-shadow: 7px 5px 7px rgba(75, 157, 224, 0.89);
+border-radius: 5px 5px 0 0;
+}
+.table-sessions thead tr{
+   background-color: grey;
+   color: white;
+   text-align: left;
+   font-weight: bold;
+ }
+ .table-sessions th,
+ .table-sessions td{
+   padding: 12px 15px;
+ }
+ .table-sessions tbody tr{
+   color: white;
+   border-bottom: 1px solid black;
+ }
+ .table-sessions tbody tr:nth-of-type(even){
+   background-color: aqua;
+ }
+ .table-sessions tbody tr:last-of-type{
+   border-bottom: 1px solid black;
+ }
+
+ .table-sessions{
+   margin-top: 100px;
+   float:right;
+   margin-right: 200px;
+ }

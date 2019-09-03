@@ -6,6 +6,41 @@
     <title>Free Mentorship</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="shortcut icon" href="../img/download (2).png" type="image/x-icon" />
+    <style>
+        #containerm{
+            margin:0 auto;
+            width:80%;
+            font-family: verdana,arial,sans-serif;
+            font-size:16px;
+        }
+        #modalWindow {
+            position: fixed;
+            font-family: arial,helvetica, sans-serif;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 99999;
+            opacity:0;
+            transition: opacity 400ms linear;
+            pointer-events: none;
+        }
+        #modalWindow:target {
+            opacity:1;
+            pointer-events: auto;
+        }
+        #modalWindow > div {
+            padding: 0.6em;
+            background-color: solid 1px #cac8c8;
+margin-top: 10%;
+border-radius: 0.5rem;
+outline: none;
+border: solid 1px #cac8c8;
+flex-wrap: wrap;
+align-content: flex-start;
+        }		
+        </style>
 </head>
 
 <body class="mentor">
@@ -13,24 +48,15 @@
                 <img class="logo-mentor" src="../img/downloadvv2.png">
                 <li><a href="../index.html">Logout</a></li>
                 <li><a href="../html/users.html">Users</a></li>
-                <li><a href="../html/sessions.html">Sessions</a></li>
+                <li><a href="#modalWindow">Sessions</a></li>
                 <li><input class="look" type="text" placeholder="Search for a mentor" name="search"></li>
             </div>
-    <div class="profil">
-    <div class="mentor-logo">
-<img src="../img/downloadvv1.png">
-    </div>
-    <div class="the-title">
-<h2>The User`s Identifications</h2>
-
-    </div>
-    <div class="profil">
         </br>
     </br>
     </br>
     </br>
         <div class="the-title">
-            <h2>The User`s Identifications</h2>
+            <h2 class="title1">The User`s Identifications</h2>
         </div>
     </div>
     <div class="t-use">
@@ -79,6 +105,21 @@
         <form action="./changed.html" method="POST">
             <button id="enter-change" type="submit">Change to mentor</button></br>
         </form>
+    </div>
+    <div id="modalWindow">
+        <div>
+            <a  class="back" href="#close">Back</a><br>
+            <div class="sessions-pop">
+                    <h1>Only for the mentor!.</h1>
+                    <div class="Sign-p">
+                        <form action="./session.html" method="POST">
+                            <input id="signin-pop" type="password" placeholder="password" required></br></br>
+                            <button id="enter-pop" type="submit"><a href="../index.html"></a>Signin</button></br>
+                        </form></br>
+                    </div>
+                    <img class="logo" src="../img/downloadvv2.png">
+                </div>
+        </div>
     </div>
 </body>
 
