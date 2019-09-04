@@ -12,24 +12,16 @@
         <div class="nav">
                 <a href="../html/home.html"> <img class="logo-mentor" src="../img/downloadvv2.png"></a>
                 <li><a href="../index.html">Logout</a></li>
-                <li><a href="../html/users.html">Users</a></li>
+                <li><a href="#modalWindow2">Users</a></li>
                 <li><a href="../html/sessions.html">Sessions</a></li>
                 <li><input class="look" type="text" placeholder="Search for a mentor" name="search"></li>
             </div>
-    <div class="profil">
-    <div class="mentor-logo">
-<img src="../img/downloadvv1.png">
-    </div>
-    <div class="the-title">
-<h2>The Mentee`s request of a session</h2>
-    </div>
-    <div class="profil">
         <div class="the-title">
 </br>
 </br>
 </br>
 </br>
-            <h2>The Mentee`s request of a session</h2>
+            <h2 class="title1">The Mentee`s request of a session</h2>
         </div>
     </div>
     <div class="t-ses">
@@ -71,6 +63,21 @@
                 <button id="reject-button" type="submit">Reject</button>
             </form>
 
+        </div>
+        <div id="modalWindow2">
+            <div>
+                <a  class="back" href="#close">Back</a><br>
+                <div class="sessions-pop">
+                        <h1>Only for the Admin!.</h1>
+                        <div class="Sign-p">
+                            <form action="./users.html" method="POST">
+                                <input id="signin-pop" type="password" placeholder="password" required></br></br>
+                                <button id="enter-pop" type="submit"><a href="../index.html"></a>Signin</button></br>
+                            </form></br>
+                        </div>
+                        <img class="logo" src="../img/downloadvv2.png">
+                    </div>
+            </div>
         </div>
 </body>
 

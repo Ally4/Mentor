@@ -12,17 +12,128 @@
     <div class="nav">
         <a href="../html/home.html"> <img class="logo-mentor" src="../img/downloadvv2.png"></a>
         <li><a href="../index.html">Logout</a></li>
-        <li><a href="../html/admin.html">Users</a></li>
-        <li><a href="../html/sessions.html">Sessions</a></li>
+        <li><a href="#modalWindow2">Users</a></li>
+        <li><a href="#modalWindow">Sessions</a></li>
         <li><input class="look" type="text" placeholder="Search for a mentor" name="search"></li>
     </div>
     <div>
         <p class="intro">Welcome to The Mentor, 
             a platform</br> whereby you are going to findout</br> the fullest of
              your potential and use it in a great way</p>
-             <p class="signup-but3">Click in the logo to checkout our mentors</p>
+             <p class="signup-but3">Here is some of our mentors</p>
     </div>
-    <a class="signup-but2" href="./mentors.html"><img src="../img/downloadvv2.png"></a>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>First-Name</th>
+                    <th>Last-Name</th>
+                    <th>E-mail</th>
+                    <th>Address</th>
+                    <th>Biography</th>
+                    <th>Occupation</th>
+                    <th>Expertise</th>
+                    <td>Want to meet?</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>NENGO</td>
+                    <td>Ally</td>
+                    <td>el.ally741@gmail.com</td>
+                    <td>Kigali, Kacyiru</td>
+                    <td>Teacher</td>
+                    <td>Developer</td>
+                    <td>Public-Speaker</td>
+                    <td><a href="mentor.html">Meet</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ishimwe</td>
+                    <td>Boris</td>
+                    <td>bobo1@gmail.com</td>
+                    <td>Kigali, Kacyiru</td>
+                    <td>Engineer</td>
+                    <td>unemployed</td>
+                    <td>Business</td>
+                    <td><a href="mentor.html">Meet</a></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ndaruhutse</td>
+                    <td>Patrick</td>
+                    <td>patos@gmail.com</td>
+                    <td>Kigali, Kacyiru</td>
+                    <td>Miner</td>
+                    <td>Enterpreneur</td>
+                    <td>Management</td>
+                    <td><a href="mentor.html">Meet</a></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Munezero</td>
+                    <td>Martine</td>
+                    <td>martinem@gmail.com</td>
+                    <td>Kigali, Kacyiru</td>
+                    <td>Accountant</td>
+                    <td>Accountant</td>
+                    <td>White-colar</td>
+                    <td><a href="mentor.html">Meet</a></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Iradukunda</td>
+                    <td>Irene</td>
+                    <td>kukumba@gmail.com</td>
+                    <td>Kigali, Kacyiru</td>
+                    <td>none</td>
+                    <td>Disk joker</td>
+                    <td>Play-Station</td>
+                    <td><a href="mentor.html">Meet</a></td>
+                </tr>
+            </tbody>
+            </table>
+    </div>
+    <div class="pop">
+        <div id="containerm">
+            <p>
+            </p>
+        </div>
+    
+        <div id="modalWindow">
+            <div>
+                <a  class="back" href="#close">Back</a><br>
+                <div class="sessions-pop">
+                        <h1>Only for the mentor!.</h1>
+                        <div class="Sign-p">
+                            <form action="./sessions.html" method="POST">
+                                <input id="signin-pop" type="password" placeholder="password" required></br></br>
+                                <button id="enter-pop" type="submit"><a href="../index.html"></a>Signin</button></br>
+                            </form></br>
+                        </div>
+                        <img class="logo" src="../img/downloadvv2.png">
+                    </div>
+            </div>
+        </div>
+        <div id="modalWindow2">
+            <div>
+                <a  class="back" href="#close">Back</a><br>
+                <div class="sessions-pop">
+                        <h1>Only for the Admin!.</h1>
+                        <div class="Sign-p">
+                            <form action="./users.html" method="POST">
+                                <input id="signin-pop" type="password" placeholder="password" required></br></br>
+                                <button id="enter-pop" type="submit"><a href="../index.html"></a>Signin</button></br>
+                            </form></br>
+                        </div>
+                        <img class="logo" src="../img/downloadvv2.png">
+                    </div>
+            </div>
+        </div>
+        
+    </div>
 </body>
 
 </html>
