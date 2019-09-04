@@ -509,34 +509,44 @@ text-align: left;
   width:80%;
   font-size:16px;
 }
-#modalwindow{
+
+
+#modalWindow {
   position: fixed;
+  font-family: arial, helvetica, sans-serif;
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
-  background: rgb(0, 0, 0, 0.4);
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 99999;
   opacity: 0;
   transition: opacity 400ms linear;
-  pointer-events: auto;
+  pointer-events: none;
 }
+
 #modalWindow:target{
 opacity: 1;
 pointer-events: auto;
 }
 #modalWindow > div{
 width: 400px;
-height: 314px;
+height: 304px;
 position: relative;
+padding: 0.6em;
 margin: 10% auto;
 padding: 20px 20px 13px 20px;
-border: 2px solid black;
+border: solid 1px #cac8c8;
 box-shadow: 0.5em 0.5em 0.5em #9c9c9c; 
+outline: none;
 border-radius: 10px;
 text-align: center;
 background-color: rgba(111, 111, 139, 0.726);
+flex-wrap: wrap;
+align-content: flex-start;
+
 }
+
 
 .signin-pop{
   margin-left: 30%;
@@ -546,34 +556,78 @@ background-color: rgba(111, 111, 139, 0.726);
   margin-left: 20px;
 }
 
-#modalwindow2{
+#enter-pop{
+  border-radius: 0.5rem;
+  background-color: rgb(2, 103, 143);
+  padding: 1em;
+  color:white;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+#signin-pop{
+  padding: 1.2em;
+  width: 240px;
+  margin-top: 2%;
+  border-radius: 0.5rem;
+  outline: none;
+  border: solid 1px #cac8c8;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+
+
+
+
+
+
+
+
+#containerm{
+  margin: 0px auto;
+  width:80%;
+  font-size:16px;
+}
+
+
+#modalWindow2 {
   position: fixed;
+  font-family: arial, helvetica, sans-serif;
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
-  background: rgb(0, 0, 0, 0.4);
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 99999;
   opacity: 0;
   transition: opacity 400ms linear;
-  pointer-events: auto;
+  pointer-events: none;
 }
+
 #modalWindow2:target{
 opacity: 1;
 pointer-events: auto;
 }
 #modalWindow2 > div{
 width: 400px;
-height: 314px;
+height: 304px;
 position: relative;
+padding: 0.6em;
 margin: 10% auto;
 padding: 20px 20px 13px 20px;
-border: 2px solid black;
+border: solid 1px #cac8c8;
 box-shadow: 0.5em 0.5em 0.5em #9c9c9c; 
+outline: none;
 border-radius: 10px;
 text-align: center;
 background-color: rgba(111, 111, 139, 0.726);
+flex-wrap: wrap;
+align-content: flex-start;
+
 }
+
 
 .signin-pop{
   margin-left: 30%;
@@ -604,14 +658,20 @@ background-color: rgba(111, 111, 139, 0.726);
   align-content: flex-start;
 }
 
-.back{
-  color: white;
-  font-weight: bold;
-}
 
-.up{
-  margin-top: -25px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .table-sessions 
