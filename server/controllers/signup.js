@@ -30,7 +30,7 @@ const signup = (req, res) => {
   const { firstName, lastName, email, address, bio, occupation, expertise } = req.body;
   users.push({ id, firstName, lastName, email, password, address, bio, occupation, expertise, position: 'user' });
   const payload = {
-    id, firstName, lastName, email, password, address, bio, occupation, expertise, position: 'user',
+    id, firstName, lastName, email, position: 'user',
   };
   const token = jwt.sign(payload, process.env.THE_KEY);
   return res.status(201).json({
@@ -38,7 +38,6 @@ const signup = (req, res) => {
     message: 'User created successfully!.',
     data: {
       token,
-      message: 'User created successfully!.',
     },
   });
 };

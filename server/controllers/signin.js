@@ -21,14 +21,14 @@ const signin = (req, res) => {
   if (!user) {
     return res.status(404).json({
       status: 404,
-      message: 'User not found',
+      message: 'Same credential must be wrong',
     });
   }
   const comparePassword = bcrypt.compareSync(password, user.password);
   if (!comparePassword) {
     return res.status(400).json({
       status: 400,
-      error: 'Incorrect password',
+      error: 'The information might not be right',
     });
   }
   const payload = {
@@ -36,11 +36,6 @@ const signin = (req, res) => {
     firstName: user.firstName,
     lastName: user.lastName,
     email: user.email,
-    password: user.password,
-    bio: user.bio,
-    occupation: user.occupation,
-    expertise: user.expertise,
-    address: user.address,
     position: user.position,
   };
   const token = jwt.sign(payload, process.env.THE_KEY);

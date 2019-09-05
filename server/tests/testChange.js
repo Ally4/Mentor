@@ -28,7 +28,7 @@ describe('Change User test', () => {
           .patch('/api/v1/user/1')
           .set('authorization', tokenAdminErr)
           .then((res) => {
-            res.body.status.should.be.equal(403);
+            res.body.status.should.be.equal(401);
             done();
           })
           .catch(err => done(err));

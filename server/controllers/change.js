@@ -14,24 +14,24 @@ const change = (req, res) => {
 
   jwt.verify(req.token, process.env.THE_KEY, (err, theUser) => {
     if (err) {
-      res.status(403).json({
-        status: 403,
-        error: 'auth failed',
+      res.status(401).json({
+        status: 401,
+        error: 'Some credentials are not right',
       });
     } else if (theUser.position !== 'admin') {
       res.status(403).json({
         status: 403,
-        error: 'Access denied',
+        error: 'Access denied, not allowed',
       });
     } else if (!user) {
       res.status(404).json({
         status: 404,
-        error: 'User ID not found',
+        error: 'User`s Id is not found',
       });
     } else if (user.position === 'admin' || user.position === 'mentor') {
       res.status(401).json({
         status: 401,
-        error: 'Must be users ID',
+        error: 'Must be of position user',
       });
     } else {
       user.position = 'mentor';

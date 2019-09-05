@@ -13,24 +13,24 @@ const accept = (req, res) => {
     const session = sessions.find(c => c.id === parseInt(req.params.sessionId));
 
     if (err) {
-      res.status(403).json({
-        status: 403,
-        error: 'auth failed',
+      res.status(401).json({
+        status: 401,
+        error: 'Some credentials are not right',
       });
     } else if (theUser.position !== 'mentor') {
       res.status(403).json({
         status: 403,
-        error: 'Access denied',
+        error: 'Access denied, you are not allowed',
       });
     } else if (!session) {
       res.status(404).json({
         status: 404,
-        error: 'Session request not found',
+        error: 'Session requested not found',
       });
     } else if (theUser.id !== session.mentorId) {
-      res.status(401).json({
-        status: 401,
-        error: 'The given session Id does not match with mentor Id',
+      res.status(403).json({
+        status: 403,
+        error: 'Some credentials are mismatched',
       });
     } else if (session.status === 'accepted') {
       res.status(409).json({
