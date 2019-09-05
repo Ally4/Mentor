@@ -37,7 +37,7 @@ describe('/GET Mentors', () => {
         .get('/api/v1/mentors')
         .set('authorization', tokenUserErr)
         .then((res) => {
-            res.body.status.should.be.equal(403);
+            res.body.status.should.be.equal(401);
             done();
         })
         .catch(err => done(err));

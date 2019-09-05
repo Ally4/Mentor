@@ -37,7 +37,7 @@ describe('/PATCH Accept user request', () => {
         .patch('/api/v1/sessions/1/accept')
         .set('authorization', tokenMentorErr)
         .then((res) => {
-            res.body.status.should.be.equal(403);
+            res.body.status.should.be.equal(401);
             done();
         })
         .catch(err => done(err));
@@ -70,7 +70,7 @@ describe('/PATCH Accept user request', () => {
         .patch('/api/v1/sessions/1/accept')
         .set('authorization', tokenMentor)
         .then((res) => {
-            res.body.status.should.be.equal(401);
+            res.body.status.should.be.equal(403);
             done();
         })
         .catch(err => done(err));

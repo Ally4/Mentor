@@ -12,14 +12,14 @@ const reject = (req, res) => {
   jwt.verify(req.token, process.env.THE_KEY, (err, theUser) => {
     const session = sessions.find(c => c.id === parseInt(req.params.sessionId));
     if (err) {
-      res.status(403).json({
-        status: 403,
-        error: 'auth failed',
+      res.status(401).json({
+        status: 401,
+        error: 'Some credentials are not right',
       });
     } else if (theUser.position !== 'mentor') {
       res.status(403).json({
         status: 403,
-        error: 'Access denied',
+        error: 'Access denied, not allowed',
       });
     } else if (!session) {
       res.status(404).json({
@@ -27,9 +27,9 @@ const reject = (req, res) => {
         error: 'Session request not found',
       });
     } else if (theUser.id !== session.mentorId) {
-      res.status(401).json({
-        status: 401,
-        error: 'The given session Id does not match with mentor Id',
+      res.status(403).json({
+        status: 403,
+        error: 'The session`s Id does not match with the mentor Id',
       });
     } else if (session.status === 'rejected') {
       res.status(409).json({

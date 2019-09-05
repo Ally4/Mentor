@@ -38,7 +38,7 @@ describe('/GET Specific Mentor', () => {
         .get('/api/v1/mentors/1')
         .set('authorization', tokenUserErr)
         .then((res) => {
-            res.body.status.should.be.equal(403);
+            res.body.status.should.be.equal(401);
             done();
         })
         .catch(err => done(err));
@@ -71,7 +71,7 @@ describe('/GET Specific Mentor', () => {
         .get('/api/v1/mentors/1')
         .set('authorization', tokenUser)
         .then((res) => {
-            res.body.status.should.be.equal(401);
+            res.body.status.should.be.equal(403);
             done();
         })
         .catch(err => done(err));

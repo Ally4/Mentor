@@ -28,7 +28,7 @@ describe('/POST Create session request', () => {
         .post('/api/v1/sessions')
         .set('authorization', tokenUserErr)
         .then((res) => {
-            res.body.status.should.be.equal(403);
+            res.body.status.should.be.equal(401);
             done();
         })
         .catch(err => done(err));

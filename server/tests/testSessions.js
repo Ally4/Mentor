@@ -37,7 +37,7 @@ describe('/GET Sessions', () => {
         .get('/api/v1/sessionsView')
         .set('authorization', tokenMentorErr)
         .then((res) => {
-            res.body.status.should.be.equal(403);
+            res.body.status.should.be.equal(401);
             done();
         })
         .catch(err => done(err));

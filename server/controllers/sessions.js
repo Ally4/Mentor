@@ -10,14 +10,14 @@ dotenv.config();
 const getSessions = (req, res) => {
   jwt.verify(req.token, process.env.THE_KEY, (err, theUser) => {
     if (err) {
-      res.status(403).json({
-        status: 403,
-        error: 'auth failed',
+      res.status(401).json({
+        status: 401,
+        error: 'Some credentials are not right',
       });
     } else if (theUser.position !== 'mentor') {
       res.status(403).json({
         status: 403,
-        error: 'Access denied',
+        error: 'Access denied, you are allowed',
       });
     } else {
       const session = sessions.filter(c => c.mentorId === theUser.id);

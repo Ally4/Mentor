@@ -10,9 +10,9 @@ dotenv.config();
 const create = (req, res) => {
   jwt.verify(req.token, process.env.THE_KEY, (err, theUser) => {
     if (err) {
-      res.status(403).json({
-        status: 403,
-        error: 'auth failed',
+      res.status(401).json({
+        status: 401,
+        error: 'Some credentials are not right',
       });
     } else if (theUser.position !== 'user') {
       res.status(403).json({
