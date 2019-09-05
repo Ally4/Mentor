@@ -714,3 +714,8 @@ border-radius: 5px 5px 0 0;
    float:right;
    margin-right: 200px;
  }
+ 
+ .back{
+   color: white;
+   font-weight: bold;
+ }
