@@ -5,7 +5,7 @@ ___
 [GH-pages](https://ally4.github.io/Mentor/UI)
 [Heroku]https://the-mentorship.herokuapp.com/)
 ___
-[![Build Status](https://travis-ci.com/Ally4/Mentor.svg?branch=develop)](https://travis-ci.com/Ally4/Mentor)  [![Coverage Status](https://coveralls.io/repos/github/Ally4/Mentor/badge.svg?branch=develop)](https://coveralls.io/github/Ally4/Mentor?branch=develop)
+[![Build Status](https://travis-ci.com/Ally4/Mentor.svg?branch=develop)](https://travis-ci.com/Ally4/Mentor)  [![Coverage Status](https://coveralls.io/repos/github/Ally4/Mentor/badge.svg?branch=develop)](https://coveralls.io/github/Ally4/Mentor?branch=develop) [![Maintainability](https://api.codeclimate.com/v1/badges/acd9c86926329c7f2de1/maintainability)](https://codeclimate.com/github/Ally4/Mentor/maintainability)
 ___
 ## Mentor`s endpoints on the localhost://4404
 
