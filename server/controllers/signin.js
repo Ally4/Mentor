@@ -43,10 +43,7 @@ const signin = (req, res) => {
     status: 200,
     message: 'User is successfully logged in!.',
     data: {
-      firstName: user.firstName,
-      lastName: user.lastName,
-      email: user.email,
-      position: user.position,
+      payload,
       token: token,
     },
   });
